@@ -7,12 +7,7 @@ const OrderSchema = new mongoose.Schema({
     phone: { type: String, required: [true, "Set phone for order"] },
     adress: { type: String, required: [true, "Set adress for order"] },
   },
-  food: [
-    {
-      id: { type: String, required: true },
-      count: { type: Number, required: true },
-    },
-  ],
+  food: { type: Array, required: true },
   totalPrice: { type: Number, required: true },
 });
 
